@@ -4,19 +4,25 @@ public class Loja {
     private String nome;
     private int quantidadeFuncionarios;
     private double salarioBaseFuncionario;
+    private Endereco endereco;
+    private Data dataFundacao;
 
     // Construtor que inicializa todos os atributos
-    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario) {
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
     }
 
     // Construtor que inicializa nome e quantidade de funcionários, com salário base = -1
-    public Loja(String nome, int quantidadeFuncionarios) {
+    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = -1;
+        this.endereco = endereco;
+        this.dataFundacao = dataFundacao;
     }
 
     // Getter e Setter para o atributo nome
@@ -46,6 +52,24 @@ public class Loja {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
+    // Getter e Setter para o atributo endereco
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    // Getter e Setter para o atributo dataFundacao
+    public Data getDataFundacao() {
+        return dataFundacao;
+    }
+
+    public void setDataFundacao(Data dataFundacao) {
+        this.dataFundacao = dataFundacao;
+    }
+
     // Método gastosComSalario que retorna quanto a loja gasta com o salário de todos os seus funcionários
     // Caso o salarioBaseFuncionario for igual a -1, o cálculo não é realizado e retorna apenas -1
     public double gastosComSalario() {
@@ -62,7 +86,7 @@ public class Loja {
     public char tamanhoDaLoja() {
         if (quantidadeFuncionarios < 10) {
             return 'P';
-        } else if (quantidadeFuncionarios >= 10 && quantidadeFuncionarios <= 30) {
+        } else if (quantidadeFuncionarios <= 30) {
             return 'M';
         } else {
             return 'G';
@@ -75,7 +99,9 @@ public class Loja {
     public String toString() {
         return "Nome da Loja: " + nome +
                 ", Quantidade de funcionários: " + quantidadeFuncionarios +
-                ", Salário Base dos funcionários: " + salarioBaseFuncionario;
+                ", Salário Base dos funcionários: " + salarioBaseFuncionario +
+                ", Endereço: " + endereco +
+                ", Data de fundação: " + dataFundacao;
     }
 
 }
