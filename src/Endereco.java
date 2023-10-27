@@ -1,4 +1,5 @@
 public class Endereco {
+
     // Atributos da classe
     private String nomeDaRua;
     private String numero;

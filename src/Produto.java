@@ -1,4 +1,5 @@
 public class Produto {
+
     // Atributos da classe
     private String nome;
     private double preco;
