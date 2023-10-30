@@ -57,10 +57,10 @@ public class Data {
     // Método para validar a data
     private boolean validaData(int dia, int mes, int ano) {
         if (mes < 1 || mes > 12) {
-            return false; // Mês inválido
+            return false;
         }
         if (dia < 1 || dia > diasNoMes(mes, ano)) {
-            return false; // Dia inválido
+            return false;
         }
         return true;
     }

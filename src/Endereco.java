@@ -2,22 +2,22 @@ public class Endereco {
 
     // Atributos da classe
     private String nomeDaRua;
-    private String numero;
-    private String complemento;
-    private String cep;
     private String cidade;
     private String estado;
     private String pais;
+    private String cep;
+    private String numero;
+    private String complemento;
 
     // Construtor que inicializa todos os atributos
-    public Endereco(String nomeDaRua, String numero, String complemento, String cep, String cidade, String estado, String pais) {
+    public Endereco(String nomeDaRua, String cidade,  String estado, String pais, String cep, String numero, String complemento) {
         this.nomeDaRua = nomeDaRua;
-        this.numero = numero;
-        this.complemento = complemento;
-        this.cep = cep;
         this.cidade = cidade;
         this.estado = estado;
         this.pais = pais;
+        this.cep = cep;
+        this.numero = numero;
+        this.complemento = complemento;
     }
 
     // Getter e Setter para o atributo nomeDaRua
@@ -27,33 +27,6 @@ public class Endereco {
 
     public void setNomeDaRua(String nomeDaRua) {
         this.nomeDaRua = nomeDaRua;
-    }
-
-    // Getter e Setter para o atributo numero
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    // Getter e Setter para o atributo complemento
-    public String getComplemento() {
-        return complemento;
-    }
-
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
-    }
-
-    // Getter e Setter para o atributo cep
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
     }
 
     // Getter e Setter para o atributo cidade
@@ -83,16 +56,43 @@ public class Endereco {
         this.pais = pais;
     }
 
+    // Getter e Setter para o atributo cep
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    // Getter e Setter para o atributo numero
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    // Getter e Setter para o atributo complemento
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
     // Método toString que retorna uma representação formatada dos atributos
     // @Override é usado para garantir que você está sobrescrevendo um método e não criando um novo
     @Override
     public String toString() {
         return "Rua: " + nomeDaRua +
-                " - Número: " + numero +
-                " - Complemento: " + complemento +
-                " - CEP: " + cep +
                 " - Cidade: " + cidade +
                 " - Estado: " + estado +
-                " - País: " + pais;
+                " - País: " + pais +
+                " - CEP: " + cep +
+                " - Número: " + numero +
+                " - Complemento: " + complemento;
     }
 }
